@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar & Editar Etiquetas</title>
+    <!-- Fonte premium -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Link para FontAwesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="layout">
+            <!-- Seção de opções -->
+            <div class="options-section">
+                <!-- Campo de código da empresa com ícone -->
+                <div class="input-container">
+                    <div class="dropdown">
+                        <button class="dropbtn" id="select-company-code">
+                            <i class="fas fa-building"></i> Código da Empresa...
+                        </button>
+                        <div class="dropdown-content" id="company-list"></div>
+                    </div>
+                </div>
+                <!-- Campo de código da etiqueta com ícone -->
+                <div class="input-container">
+                    <div class="dropdown">
+                        <button class="dropbtn" id="select-label-code">
+                            <i class="fas fa-tag"></i> Código da Etiqueta...
+                        </button>
+                        <div class="dropdown-content" id="label-list"></div>
+                    </div>
+                </div>
+                <!-- Campos de largura e altura com ícones -->
+                <div class="input-container">
+                    <label for="label-width"><i class="fas fa-ruler-horizontal"></i> Largura (cm):</label>
+                    <input type="number" id="label-width" value="8" step="any">
+                </div>
+                <div class="input-container">
+                    <label for="label-height"><i class="fas fa-ruler-vertical"></i> Altura (cm):</label>
+                    <input type="number" id="label-height" value="5" step="any">
+                </div>
+                <!-- Botões com ícones -->
+                <button id="rotate"><i class="fas fa-sync-alt"></i> Rotacionar</button>
+                <button id="downloadZpl"><i class="fas fa-file-download"></i> Exportar ZPL</button>
+                <button id="downloadPng"><i class="fas fa-image"></i> Exportar PNG</button>
+            </div>
+
+            <!-- Seção de editor -->
+            <div class="editor-section">
+                <textarea id="zpl-input" placeholder="Insira o código ZPL aqui..."></textarea>
+            </div>
+            
+            <!-- Seção de pré-visualização -->
+            <div class="preview-section">
+                <div id="label-preview-container">
+                    <img id="label-preview" src="" alt="Pré-visualização da Etiqueta">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Link para script JS -->
+    <script src="script.js"></script>
+</body>
+</html>

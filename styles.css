@@ -1,0 +1,154 @@
+/* Corpo da página com fonte premium */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f0f2f5; /* Fundo neutro */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container principal */
+.container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 95%;
+    max-width: 1400px;
+    height: 800px; /* Defina uma altura específica, se necessário */
+    box-sizing: border-box;
+    margin: 40px auto;
+}
+
+/* Layout em grid */
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 20px;
+    width: 100%;
+}
+
+/* Seção de opções */
+.options-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Seção do editor de ZPL */
+.editor-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Seção de visualização */
+.preview-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+textarea {
+    width: 100%;
+    height: 400px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    padding: 10px;
+    border: 2px solid #727272;
+    border-radius: 6px;
+    box-sizing: border-box;
+    resize: none;
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+input[type="text"], input[type="number"] {
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #007bff;
+    border-radius: 6px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 6px;
+    background: linear-gradient(145deg, #007bff, #0056b3);
+    color: #fff;
+    box-shadow: 0px 8px 16px rgba(0, 123, 255, 0.2);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background: linear-gradient(145deg, #0056b3, #004091);
+    box-shadow: 0px 12px 24px rgba(0, 123, 255, 0.3);
+}
+
+#label-preview-container {
+    background-color: #969595;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#label-preview {
+    /* Garante que a imagem preencha o contêiner, mantendo a proporção correta */
+    object-fit: contain;
+    transform-origin: center center;
+    width: 100%; /* Garante que a imagem sempre ocupe o tamanho do contêiner */
+    height: 100%;
+}
+
+/* Dropdown customizado */
+.dropbtn {
+    background-color: #fff;
+    color: #333;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: 100%;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
